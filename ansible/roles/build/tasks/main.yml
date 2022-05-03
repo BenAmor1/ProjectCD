@@ -7,4 +7,5 @@
   shell: npm install /var/lib/jenkins/workspace/CD_Project
 #build project
 - name: build App
-  shell: ng build
+  shell: ng build && chmod 777 -R /var/lib/jenkins/workspace/CD_Project/dist
+
