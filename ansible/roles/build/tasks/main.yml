@@ -1,0 +1,9 @@
+---
+# tasks file for buildDocker
+#- name: install npm
+ # apt: name=npm
+#- name: running npm install
+ # shell: npm install /var/lib/jenkins/workspace/devops
+#build project
+- name: build App
+  shell: ng build  && chmod 777 -R /var/lib/jenkins/workspace/CD_Project/dist/
