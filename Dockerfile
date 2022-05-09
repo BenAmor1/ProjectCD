@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-WORKIDIR /var/lib/jenkins/workspace/CD_Project
+WORKDIR /var/lib/jenkins/workspace/CD_Project
 
 copy ./dist/CD_Project/*  /usr/share/nginx/html/
 
