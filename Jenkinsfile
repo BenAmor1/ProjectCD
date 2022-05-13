@@ -22,7 +22,6 @@ pipeline
          stage ('docker'){
               steps{
                 script{
-		   sh "docker build . -t cd-project"
                    sh "sudo ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml"
                 }                
               }             
