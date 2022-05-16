@@ -1,7 +1,7 @@
 ---
 # tasks file for buildDocker
 - name: install npm
-   apt: name=npm
+  apt: name=npm
 #runing npm installa
 - name: running npm install
   shell: npm install /var/lib/jenkins/workspace/CD_Project
