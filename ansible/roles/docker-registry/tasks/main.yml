@@ -4,5 +4,5 @@
   docker_image:
     name: benamor/cd-project
     repository: beffa/continuous_delivery
-    tag: 1.0
+    tag: cd-project
     push: yes

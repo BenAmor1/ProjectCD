@@ -12,7 +12,7 @@
 - name: run container docker
   docker_container:
     name: cd-container
-    image: cd-project:latest
+    image: beffa/continuous-delivery:cd-project
     state: started
     recreate: true
     ports:
