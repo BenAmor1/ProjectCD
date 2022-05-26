@@ -1,0 +1,8 @@
+---
+# tasks file for docker-registry
+- name: Tag and push to docker hub
+  docker_image:
+    name: benamor/cd-project
+    repository: beffa/continuous_delivery
+    tag: 1.0
+    push: yes
