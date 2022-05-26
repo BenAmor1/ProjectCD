@@ -10,7 +10,7 @@ pipeline
                                credentialsId: '889caec4-a638-4273-91b1-6a945a58201c',
                                url: 'https://github.com/BenAmor1/ProjectCD.git']]])
                 }
-              }  
+              }
          }
          stage('build'){
               steps{
@@ -23,8 +23,15 @@ pipeline
               steps{
                 script{
                    sh "sudo ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml"
-                }                
-              }             
+                }
+              }
+         }
+		 stage ('docker-registry'){
+              steps{
+                script{
+                   sh "sudo ansible-playbook ansible/docker-registry.yml -i ansible/inventory/host.yml"
+                }
+              }
          }
       }
 }
