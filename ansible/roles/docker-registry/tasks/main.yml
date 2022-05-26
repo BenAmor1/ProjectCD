@@ -1,8 +1,15 @@
 ---
 # tasks file for docker-registry
-- name: Tag and push to docker hub
-  docker_image:
-    name: cd-project
-    repository: beffa/continuous-delivery
-    tag: beffa/continuous-delivery:cd-project
-    push: yes
+
+# TAG docker image with name repo
+- name: docker tag
+  shell: docker iamge tag cd-project beffa/continuous-delivery:cd-project
+#push image to docker repo
+- name: psuh iamge
+  shell: docker push beffa/timesheet:cd-project
+#Stop and remove all container
+- name: remove local coantiner
+  shell: docker kill $(docker ps -q) && docker rm $(docker ps -a -q)
+#remove all local images
+- name: remove local images
+  shell: docker rmi -f $(docker images -aq)
