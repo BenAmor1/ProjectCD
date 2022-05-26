@@ -9,7 +9,7 @@
   shell: docker push beffa/timesheet:cd-project
 #Stop and remove all container
 - name: remove local coantiner
-  shell: docker stop $(docker ps -q) && docker rm $(docker ps -a -q)
+  shell: docker rm $(docker ps -a -q)
 #remove all local images
 - name: remove local images
   shell: docker rmi -f $(docker images -aq)
