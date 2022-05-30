@@ -6,7 +6,7 @@
   shell: docker image tag cd-project beffa/continuous-delivery:cd-project
 #push image to docker repo
 - name: push image
-  shell: docker push beffa/timesheet:cd-project
+  shell: docker push beffa/continuous-delivery:cd-project
 #Stop and remove all container
 - name: remove local coantiner
   shell: docker rm $(docker ps -a -q)
