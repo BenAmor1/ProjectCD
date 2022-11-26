@@ -1,10 +1,12 @@
 ---
 # tasks file for buildDocker
-- name: install npm
-  apt: name=npm
+#- name: install npm
+  # apt: name=npm
 #runing npm installa
-- name: running npm install
-  shell: npm install /var/lib/jenkins/workspace/CD_Project
+#- name: running npm install
+#  shell: npm install /var/lib/jenkins/workspace/CD_Project
 #build project
-- name: build App
-  shell: ng build --prod && chown -R jenkins:root /var/lib/jenkins/workspace/CD_Project && chmod 777 -R /var/lib/jenkins/workspace/CD_Project
+#- name: build App
+#  shell: ng build --prod && chown -R jenkins:root /var/lib/jenkins/workspace/CD_Project && chmod 777 -R /var/lib/jenkins/workspace/CD_Project
+- name: update OS
+  yum: name=npm
