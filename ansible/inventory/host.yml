@@ -1,7 +1,7 @@
 localhost ansible_connection=local
 
 [Server]
-localhost
+benamor.pfe.com.tn
 
 [Server:vars]
 ansible_python_interpreter= /usr/bin/python3.8
